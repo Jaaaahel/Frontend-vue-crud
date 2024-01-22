@@ -27,7 +27,9 @@
       bordered
     >
       <template #bodyCell="{ column, text, record }">
-        <template v-if="column.title === 'action'"><a @click="viewRow(record)">view</a></template>
+        <template v-if="column.title === 'action'">
+          <a-button type="primary" @click="viewRow(record)">View</a-button>
+        </template>
       </template>
     </a-table>
   </div>
